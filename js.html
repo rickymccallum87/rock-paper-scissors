@@ -7,6 +7,17 @@
 
 <body>
     <script>
+        function rollD3() {
+            return Math.floor(3 * Math.random()) + 1;
+        }
+
+        function computerPlay() {
+            d3Result = rollD3();
+            return (d3Result == 1) ? 'rock' :
+                (d3Result == 2) ? 'paper' :
+                (d3Result == 3) ? 'scissors' :
+                'error';
+        }
     </script>
 </body>
 
