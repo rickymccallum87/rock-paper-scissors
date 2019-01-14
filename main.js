@@ -2,6 +2,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 const main = document.querySelector('main');
+const display = document.querySelector('#display');
 const rock = document.createElement('button');
 const paper = document.createElement('button');
 const scissors = document.createElement('button');
@@ -11,13 +12,13 @@ paper.textContent = 'Paper';
 scissors.textContent = 'Scissors';
 
 rock.addEventListener('click', () => {
-    console.log(playRound('rock', computerPlay()));
+    display.textContent = playRound('rock', computerPlay());
 });
 paper.addEventListener('click', () => {
-    console.log(playRound('paper', computerPlay()));
+    display.textContent = playRound('paper', computerPlay());
 });
 scissors.addEventListener('click', () => {
-    console.log(playRound('scissors', computerPlay()));
+    display.textContent = playRound('scissors', computerPlay());
 });
 
 main.appendChild(rock);
