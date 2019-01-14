@@ -1,6 +1,29 @@
 let playerScore = 0;
 let computerScore = 0;
 
+const main = document.querySelector('main');
+const rock = document.createElement('button');
+const paper = document.createElement('button');
+const scissors = document.createElement('button');
+
+rock.textContent = 'Rock';
+paper.textContent = 'Paper';
+scissors.textContent = 'Scissors';
+
+rock.addEventListener('click', () => {
+    console.log(playRound('rock', computerPlay()));
+});
+paper.addEventListener('click', () => {
+    console.log(playRound('paper', computerPlay()));
+});
+scissors.addEventListener('click', () => {
+    console.log(playRound('scissors', computerPlay()));
+});
+
+main.appendChild(rock);
+main.appendChild(paper);
+main.appendChild(scissors);
+
 function rollD3() {
     return Math.floor(3 * Math.random()) + 1;
 }
